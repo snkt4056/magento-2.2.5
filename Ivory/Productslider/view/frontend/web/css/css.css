@@ -1,0 +1,43 @@
+.ivory_productslider .stock.unavailable {padding: 8px;color: #ff0000;white-space: nowrap;}
+.column.main .ivory_productslider .product-items{margin-left:0;}
+.ivory_productslider .block-title h2{margin: 0;padding: 0 0 10px 0;border-bottom:1px solid #ccc;}
+.ivory_productslider .products-grid .product-item,.ivory_productslider .product-item-info{width: initial !important;margin: auto !important;display: grid;}
+.ivory_productslider .products-grid .product-item-info:hover, .ivory_productslider .products-grid .product-item-info.active{box-shadow:none;border:0;margin:0;padding:0;}
+.ivory_productslider .owl-nav{position: absolute;right: 0;top: -24px;background: #fff;}
+.ivory_productslider .owl-carousel .owl-nav button.owl-prev,.ivory_productslider .owl-carousel .owl-nav button.owl-next {height: 34px;width: 34px;font-size: 20px;}
+.ivory_productslider .owl-carousel.owl-theme .owl-nav [class*=owl-] {background: #aaa;color: #FFF;text-decoration: none;box-shadow: none;}
+.column.main .ivory_productslider .product-item{padding:0;}
+.sidebar .ivory_productslider .products-grid .product-item-info:hover .product-item-photo, .sidebar .ivory_productslider .products-grid .product-item-info.active .product-item-photo{top: initial;left: initial;}
+.ivory_productslider .owl-carousel .owl-nav button.owl-prev:hover span{
+	-webkit-animation: nav_arrow_prev .2s infinite;
+    -webkit-animation-direction: alternate;
+    animation: nav_arrow_prev .2s infinite;
+    animation-direction: alternate;
+}
+@-webkit-keyframes nav_arrow_prev {
+    0%   {margin-right: 0px;}
+    50%  {margin-right: 5px;}
+    100% {margin-right: 10px;}
+}
+@keyframes nav_arrow_prev {
+    0%   {margin-right: 0px;}
+    50%  {margin-right: 5px;}
+    100% {margin-right: 10px;}
+}
+.ivory_productslider .owl-carousel .owl-nav button.owl-next:hover span{
+	-webkit-animation: nav_arrow_next .2s infinite;
+    -webkit-animation-direction: alternate;
+    animation: nav_arrow_next .2s infinite;
+    animation-direction: alternate;
+}
+
+@-webkit-keyframes nav_arrow_next {
+    0%   {margin-left: 0px;}
+    50%  {margin-left: 5px;}
+    100% {margin-left: 10px;}
+}
+@keyframes nav_arrow_next {
+    0%   {margin-left: 0px;}
+    50%  {margin-left: 5px;}
+    100% {margin-left: 10px;}
+}

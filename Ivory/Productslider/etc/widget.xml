@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:productslider:Magento_Widget:etc/widget.xsd">
+	<widget class="Ivory\Productslider\Block\Widget\Slider" id="ivory_productslider_slider">
+		<label>Product Slider</label>
+		<description>Ivory Product Slider</description>
+		<parameters>
+			<parameter name="slider_type" xsi:type="select" required="true" visible="true">
+                <label translate="true">Slider Type</label>
+                <options>
+                    <option name="new" value="new" selected="true">
+                        <label translate="true">New Arrival</label>
+                    </option>
+                    <option name="category" value="category">
+                        <label translate="true">Select By Category</label>
+                    </option>
+					<option name="bestseller" value="bestseller">
+                        <label translate="true">Bestseller</label>
+                    </option>
+					<option name="most_viewed" value="most_viewed">
+                        <label translate="true">Most Viewed</label>
+                    </option>
+                </options>
+            </parameter>
+			<parameter name="title" xsi:type="text" required="true" visible="true">
+                <label translate="true">Title</label>
+            </parameter>
+			<parameter name="product_count" xsi:type="text" required="true" visible="true">
+                <label translate="true">Number of Products</label>
+                <value>5</value>
+            </parameter>
+			
+			<parameter name="category_id" xsi:type="block" visible="true" >
+                <label translate="true">Category</label>
+				<description translate="true">(Work with only category slider type)</description>
+                <block class="Magento\Catalog\Block\Adminhtml\Category\Widget\Chooser">
+                    <data>
+                        <item name="button" xsi:type="array">
+                            <item name="open" xsi:type="string" translate="true">Select Category...</item>
+                        </item>
+                    </data>
+                </block>
+            </parameter>
+			
+			<parameter name="desktop_count" xsi:type="text" visible="true">
+                <label translate="true">Desktop view</label>
+				<description translate="true">No. of product show in desktop view. Default : 5</description>
+            </parameter>
+			<parameter name="tablet_count" xsi:type="text" visible="true">
+                <label translate="true">Tablet view</label>
+				<description translate="true">No. of product show in tablet view. Default : 3</description>				
+            </parameter>
+			<parameter name="mobile_count" xsi:type="text" visible="true">
+                <label translate="true">Mobile view</label>
+				<description translate="true">No. of product show in mobile view. Default : 1</description>
+            </parameter>
+			
+		</parameters>
+	</widget>
+</widgets>

@@ -1,0 +1,13 @@
+<?php 
+if($block->getData('slider_type')): 
+	$key = $block->getData('slider_type');
+	$title = $block->getData('title');
+	$count = $block->getData('product_count');
+	$desktop_count = $block->getData('desktop_count');
+	$tablet_count = $block->getData('tablet_count');
+	$mobile_count = $block->getData('mobile_count');
+	$category_id = explode('/',$block->getData('category_id'));
+	
+	echo $this->getLayout()->createBlock("Ivory\Productslider\Block\Index")->setData('key', $key)->setData('title', $title)->setData('count', $count)->setData('category_id', end($category_id))->setData('desktop_count', $desktop_count)->setData('tablet_count', $tablet_count)->setData('mobile_count', $mobile_count)->setTemplate("Ivory_Productslider::productslider_widget_grid.phtml")->toHtml();
+endif; 
+?>
