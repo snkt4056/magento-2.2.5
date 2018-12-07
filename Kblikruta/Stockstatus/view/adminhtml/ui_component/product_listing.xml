@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <listingToolbar name="listing_top">
+        <filters name="listing_filters">
+            <filterSelect name="stock_status" provider="${ $.parentName }">
+                <settings>
+                    <options class="Kblikruta\Stockstatus\Ui\Component\Listing\Columns\StockStatus\Options"/>
+                    <label translate="true">Stock Status</label>
+                    <dataScope>stock_status</dataScope>
+                </settings>
+            </filterSelect>
+        </filters>
+    </listingToolbar>
+    <columns name="product_columns">
+        <column name="stock_status" class="Kblikruta\Stockstatus\Ui\Component\Listing\Columns\StockStatus" sortOrder="900">
+            <settings>
+                <addField>true</addField>
+                <filter>select</filter>
+                <options class="Kblikruta\Stockstatus\Ui\Component\Listing\Columns\StockStatus\Options"/>
+                <label translate="true">Stock Status</label>
+                <dataType>select</dataType>
+            </settings>
+        </column>
+    </columns>
+</listing>

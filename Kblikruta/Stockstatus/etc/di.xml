@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Catalog\Ui\DataProvider\Product\ProductDataProvider">
+        <plugin name="join_product_grid_with_stock_status" type="Kblikruta\Stockstatus\Plugin\Ui\DataProvider\Product\ProductDataProvider" sortOrder="100" />
+    </type>
+</config>
